@@ -14,7 +14,6 @@
 <link rel="stylesheet" href="css/styles.css" />
 
 
-<script type="text/javascript" src="direct_line.js"></script> 
 
 <script
       crossorigin="anonymous"
@@ -30,13 +29,6 @@
          height: 100%;
       }
             .modal {
-              background-color: rgba(0,0,0,0.8);
-              position: absolute;
-              bottom: 0;
-              right: 0;
-              height: 50%;
-              width: 20%;
-              display: flex;
               }
 
               .modal--hidden {
@@ -83,6 +75,8 @@
                 font-weight: 270;
                 background: #45B6D5;
                 border-width: 0px;
+
+
             } 
 </style>  
 </head>
@@ -262,27 +256,53 @@
               </pre>
               <button name="submit" type="submit" class="btn btn-lg btn-primary" id="submit" style="margin-left: 370px;"
               >SHOP NOW</button>
-              
+              <div style="display: flex;">
               <div><img style="padding-left: 60px;
-                          padding-top: 110px;" src="images/Kids_vector image.png" alt="Flowers in Chania">
+                          padding-top: 110px;
+                          flex: 1;" src="images/Kids_vector image.png" alt="Flowers in Chania">
               </div>
-             
+              <div>
+                <a id="botbtn" class="myButton">Live Chat</a>
+
+
+
+              </div>
+             </div>
             
 
         </div> 
 
 
 </footer>
+<div id="webchat_contained" style="display: none;">
+<div style="position: absolute;
+            background-color: #45B6D5;
+            margin-top: 35px;
+            margin-right: 25px;
+            height: 80px;
+            width: 36.6%;
+            right: 0;
+            bottom: -1000;
+            border-radius: 20px;
+            " ><pre style="margin-top: 80px
+                           margin-left: 20px;"><img src ="Chatbot/Chatbot icon_white.png">                                     <span style="color: #000;
+                                                                              font-weight: 700">Live Chat</span>                                      <button style="background-color: transparent;"><img id="close_btn" src="Chatbot/Path 251.png"></button></pre></div>
 <div id="webchat" role="main"
-style="
-              background-color: rgba(0,0,0,0.8);
+      style=" 
+
               position: absolute;
-              bottom: 0;
+              bottom: -1000;
               right: 0;
-              height: 50%;
-              width: 20%;
+              height: 100%;
+              width: 38%;
               display: flex;
-              "></div>
+              padding-top: 100px;
+              padding-right: 25px;
+              border-radius: 27px;
+
+              "
+        > </div> </div>
+</div>
     <script>
 
       const styleOptions = {
@@ -293,7 +313,7 @@ style="
       window.WebChat.renderWebChat(
         {
           directLine: window.WebChat.createDirectLine({
-            token: 'gRY4hs79hTM.poCk57rrvWKZ4srZj_klPWojs0BSev7TMbiglZ3N0E0'
+            token: 'ahUCJRkT3YA.2vBvmB8m_ySUk8HhKgGG__YLmopNwYqm4FZ_R_fhuBY'
           }),
           styleOptions
             },
@@ -301,8 +321,22 @@ style="
       );
     </script>
 
+    <script type="text/javascript">
+            var button = document.getElementById("botbtn");
 
-   <script src="arjun.js"></script>
+            button.onclick=function(){
+            document.getElementById("webchat_contained").style.display='block';
+
+            var button2 = document.getElementById("close_btn");
+
+            button2.onclick=function(){
+            document.getElementById("webchat_contained").style.display = "none";
+}
+            }
+    </script>
+
+
+  
    
     <!--<script>
       window.WebChat.renderWebChat(
